@@ -27,7 +27,8 @@ function download(url, callback) {
 }
 
 function sendMail(title, content){
-	var str = 'echo "' + content + '"|mail -s ' + title + ' yangfang@fudan.edu.cn';
+	content = content.replace(/"/g,"\\\"");
+	var str = 'echo "' + content + '"|mail -s "' + title + '" yangfang@fudan.edu.cn';
 	process.exec(str);
 }
 
