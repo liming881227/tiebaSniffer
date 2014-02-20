@@ -28,7 +28,7 @@ function download(url, callback) {
 
 function sendMail(title, content){
 	content = content.replace(/"/g,"\\\"");
-	var str = 'echo "' + content + '"|mail -s "' + title + '" yangfang@fudan.edu.cn';
+	var str = 'echo "' + content + '"|mail -s "$(echo -e "' + title + '\nContent-Type: text/html")" wzhscript@126.com';
 	process.exec(str);
 }
 
