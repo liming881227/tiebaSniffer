@@ -8,7 +8,7 @@ var iconv = require('iconv-lite');
 var BufferHelper = require('bufferhelper');//用于拼接BUffer。防止中文单词断裂
 var process = require('child_process');
 var fs = require('fs');
-var Tiezi = require('./models/tiezi.js');
+var Tiezi = require('../models/tiezi.js');
 
 
 // Utility function that downloads a URL and invokes
