@@ -58,7 +58,7 @@ function sendMailF(title, content){
 }
 
 function sendTiezi(tiezi){
-	sendMail(tiezi.title,tieze.content);
+	sendMail(tiezi.title,tiezi.content);
 }
 
 function tackleTiezi(title, content){
@@ -66,9 +66,9 @@ function tackleTiezi(title, content){
 		title: title,
 		content: content
 	});
-
-	Tiezi.get(newTiezi.title, function(err, tiezi){
-		if(tiezi){
+	// newTiezi.save();
+	Tiezi.findByTitle(newTiezi.title, function(err, tiezi){
+		if(tiezi.length > 0){
 			return;
 		}
 		//如果不存在，则新增帖子
