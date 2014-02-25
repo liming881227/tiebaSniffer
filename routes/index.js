@@ -90,7 +90,7 @@ exports.start = function(req, res){
 	var url = "http://tieba.baidu.com/f?kw=%C3%A7%BB%C4%BC%CD";
 	res.send("started");
 	var count = 0;
-//	setInterval(function(){
+	setInterval(function(){
 		download(url, function(data) {
 		  if (data) {
 		    var $ = cheerio.load(data);
@@ -125,7 +125,7 @@ exports.start = function(req, res){
 		  }
 		  else console.log("error");  
 		});		
-//	},1000*60);
+	},1000*60*10);
 	
 };
 
