@@ -12,6 +12,7 @@
     "iconv-lite": "0.2.11",
     "bufferhelper": "0.2.0",
     "mongodb": "*",
-    "connect-mongo": "*"
+    "connect-mongo": "*",
+    "mongoose": "*"
   }
 }
